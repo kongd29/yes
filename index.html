@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G마켓 메인 스타일</title>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        body { margin: 0; font-family: 'Noto Sans KR', Arial, sans-serif; background: #f6f6f6; }
+        .gnb { background: #fff; border-bottom: 1px solid #e5e5e5; }
+        .gnb-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; height: 70px; }
+        .logo { margin-right: 32px; }
+        .logo img { height: 38px; }
+        .nav { display: flex; gap: 24px; }
+        .nav a { color: #222; text-decoration: none; font-weight: 500; font-size: 1.05rem; transition: color 0.2s; }
+        .nav a:hover { color: #00b2e2; }
+        .search-wrap { flex: 1; display: flex; justify-content: center; }
+        .search-bar { display: flex; width: 400px; }
+        .search-bar input { flex: 1; padding: 12px; border: 2px solid #00b2e2; border-radius: 8px 0 0 8px; font-size: 1rem; outline: none; }
+        .search-bar button { padding: 12px 24px; border: none; background: #00b2e2; color: #fff; border-radius: 0 8px 8px 0; font-size: 1rem; cursor: pointer; }
+        .main-banner { max-width: 1200px; margin: 32px auto 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,178,226,0.08); }
+        .main-banner img { width: 100%; display: block; }
+        .category-bar { max-width: 1200px; margin: 32px auto 0 auto; display: flex; gap: 24px; }
+        .category { background: #fff; border-radius: 12px; padding: 18px 0; flex: 1; text-align: center; font-size: 1.1rem; color: #00b2e2; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.04); cursor: pointer; transition: background 0.2s; }
+        .category:hover { background: #e6f7fb; }
+        .section-title { max-width: 1200px; margin: 48px auto 16px auto; font-size: 1.3rem; color: #222; font-weight: bold; }
+        .products { max-width: 1200px; margin: 0 auto 48px auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .product { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 16px; text-align: center; transition: box-shadow 0.2s; }
+        .product:hover { box-shadow: 0 4px 16px rgba(0,178,226,0.12); }
+        .product img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
+        .product-title { font-size: 1.05rem; margin: 8px 0 4px 0; color: #222; }
+        .product-price { color: #00b2e2; font-weight: bold; font-size: 1.1rem; }
+        @media (max-width: 900px) {
+            .gnb-inner, .main-banner, .category-bar, .products, .section-title { max-width: 98vw; }
+            .products { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .products { grid-template-columns: 1fr; }
+            .category-bar { flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="gnb">
+        <div class="gnb-inner">
+            <a class="logo" href="#"><img src="/public/vite.svg" alt="G마켓 로고"></a>
+            <div class="nav">
+                <a href="#">베스트</a>
+                <a href="#">슈퍼딜</a>
+                <a href="#">쿠폰/출석체크</a>
+                <a href="#">스마일배송</a>
+                <a href="#">스마일클럽</a>
+            </div>
+            <div class="search-wrap">
+                <form class="search-bar" onsubmit="return false;">
+                    <input type="text" placeholder="G마켓 통합검색">
+                    <button>검색</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="main-banner">
+        <img src="/public/yo.jpg" alt="메인 배너">
+    </div>
+    <div class="category-bar">
+        <div class="category">식품</div>
+        <div class="category">패션의류</div>
+        <div class="category">생활/주방</div>
+        <div class="category">디지털/가전</div>
+        <div class="category">스포츠/레저</div>
+        <div class="category">뷰티</div>
+        <div class="category">유아동</div>
+        <div class="category">도서/취미</div>
+    </div>
+    <div class="section-title">인기 상품</div>
+    <section class="products">
+        <div class="product">
+            <img src="/public/ori.jpg" alt="오예스 오리지널">
+            <div class="product-title">오예스 오리지널 12입</div>
+            <div class="product-price">4,900원</div>
+        </div>
+        <div class="product">
+            <img src="/public/mini.jpg" alt="오예스 미니">
+            <div class="product-title">오예스 미니 24입</div>
+            <div class="product-price">6,500원</div>
+        </div>
+        <div class="product">
+            <img src="/public/cha.jpg" alt="오예스 녹차">
+            <div class="product-title">오예스 녹차 12입</div>
+            <div class="product-price">5,200원</div>
+        </div>
+        <div class="product">
+            <img src="/public/ch.jpg" alt="오예스 초코">
+            <div class="product-title">오예스 초코 12입</div>
+            <div class="product-price">5,000원</div>
+        </div>
+        <div class="product">
+            <img src="/public/st.jpg" alt="오예스 스트로베리">
+            <div class="product-title">오예스 스트로베리 12입</div>
+            <div class="product-price">5,300원</div>
+        </div>
+        <div class="product">
+            <img src="/public/pi.png" alt="오예스 피스타치오">
+            <div class="product-title">오예스 피스타치오 12입</div>
+            <div class="product-price">5,800원</div>
+        </div>
+        <div class="product">
+            <img src="/public/co.jpg" alt="오예스 코코아">
+            <div class="product-title">오예스 코코아 12입</div>
+            <div class="product-price">5,100원</div>
+        </div>
+        <div class="product">
+            <img src="/public/cha.jpg" alt="오예스 녹차(대)">
+            <div class="product-title">오예스 녹차(대) 24입</div>
+            <div class="product-price">9,900원</div>
+        </div>
+    </section>
+</body>
+</html>

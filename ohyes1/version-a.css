@@ -1,0 +1,34 @@
+
+body { margin: 0; font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif; background: #f6f6f6; }
+main { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 32px 24px; }
+.product-header { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 32px; }
+.product-image { width: 280px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); background: #fafbfc; }
+.product-details { flex: 1; }
+.product-details h1 { font-size: 2rem; margin-bottom: 12px; color: #222; }
+.price-info { margin-bottom: 12px; }
+.current-price { color: #d32f2f; font-size: 1.4rem; font-weight: bold; margin-right: 12px; }
+.original-price { color: #aaa; text-decoration: line-through; margin-right: 8px; }
+.discount-rate { color: #388e3c; font-weight: bold; }
+.shipping-info, .seller-info { color: #666; font-size: 1rem; margin-bottom: 8px; }
+.order-form { display: flex; gap: 16px; align-items: center; margin-bottom: 18px; }
+.order-form label { font-size: 1rem; margin-right: 4px; }
+.order-form select { padding: 4px 8px; border-radius: 6px; border: 1px solid #ccc; }
+.action-buttons { display: flex; gap: 12px; }
+.buy-now { background: #0072bc; color: #fff; border: none; border-radius: 8px; padding: 12px 32px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+.buy-now:hover { background: #005fa3; }
+.add-to-cart { background: #fff; color: #0072bc; border: 2px solid #0072bc; border-radius: 8px; padding: 12px 32px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.2s, color 0.2s; }
+.add-to-cart:hover { background: #e6f7fb; }
+.product-section { display: flex; gap: 32px; margin-bottom: 32px; }
+.section-item { flex: 1; background: #fafbfc; border-radius: 10px; padding: 18px 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.03); }
+.section-item h3 { margin-top: 0; color: #0072bc; font-size: 1.1rem; }
+.section-item ul { margin: 0; padding-left: 18px; color: #444; font-size: 1rem; }
+.review-section { background: #f0f7fa; border-radius: 10px; padding: 18px 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.03); }
+.review-section h3 { margin-top: 0; color: #0072bc; font-size: 1.1rem; }
+.review-section ul { margin: 0; padding-left: 18px; color: #444; font-size: 1rem; }
+@media (max-width: 700px) {
+  main { padding: 8px; }
+  .product-header { flex-direction: column; gap: 16px; }
+  .product-image { width: 90vw; max-width: 320px; }
+  .product-section { flex-direction: column; gap: 16px; }
+}
+
