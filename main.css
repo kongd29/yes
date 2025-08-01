@@ -1,4 +1,4 @@
-    <style>
+
         body { margin: 0; font-family: 'Noto Sans KR', Arial, sans-serif; background: #f6f6f6; }
         .gnb { background: #fff; border-bottom: 1px solid #e5e5e5; }
         .gnb-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; height: 70px; }
@@ -31,4 +31,3 @@
             .products { grid-template-columns: 1fr; }
             .category-bar { flex-direction: column; gap: 12px; }
         }
-    </style>
