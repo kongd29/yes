@@ -35,8 +35,9 @@
             <option value="banana">바나나</option>
           </select>
         </form>
-        <div class="action-buttons">
-          <button type="submit" form="orderFormA" class="buy-now">구매하기</button>
+        <div class="action-buttons" style="position:relative;">
+          <button type="submit" form="orderFormA" class="buy-now" id="buyNowBtnA">구매하기</button>
+          <span id="stockMsgA" style="display:none; position:absolute; left:0; top:100%; margin-top:6px; background:#fffbe6; color:#d32f2f; font-size:1rem; font-weight:bold; border:1px solid #ffe0b2; border-radius:6px; padding:6px 18px; box-shadow:0 2px 8px rgba(0,0,0,0.07); white-space:nowrap;">재고 3개 남음! 지금 구매하세요</span>
           <button type="button" class="add-to-cart">장바구니</button>
         </div>
       </div>
@@ -69,5 +70,26 @@
     </section>
   </main>
   <script type="module" src="version-a.js" defer></script>
+  <script>
+    // 구매하기 버튼에 마우스 오버/포커스 시 재고 메시지 표시
+    document.addEventListener('DOMContentLoaded', function() {
+      const buyNowBtn = document.getElementById('buyNowBtnA');
+      const stockMsg = document.getElementById('stockMsgA');
+      if(buyNowBtn && stockMsg) {
+        buyNowBtn.addEventListener('mouseenter', () => {
+          stockMsg.style.display = 'inline-block';
+        });
+        buyNowBtn.addEventListener('mouseleave', () => {
+          stockMsg.style.display = 'none';
+        });
+        buyNowBtn.addEventListener('focus', () => {
+          stockMsg.style.display = 'inline-block';
+        });
+        buyNowBtn.addEventListener('blur', () => {
+          stockMsg.style.display = 'none';
+        });
+      }
+    });
+  </script>
 </body>
 </html>
