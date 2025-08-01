@@ -9,7 +9,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'about/index.html')
+        a: resolve(__dirname, 'ohyes1/version-a.html'),
+        b: resolve(__dirname, 'ohyes2/version-b.html')
       }
     }
   }
