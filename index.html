@@ -29,8 +29,8 @@
         .product { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 16px; text-align: center; transition: box-shadow 0.2s; }
         .product:hover { box-shadow: 0 4px 16px rgba(0,178,226,0.12); }
         .product img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
-        .product-title { font-size: 1.05rem; margin: 8px 0 4px 0; color: #222; }
-        .product-price { color: #00b2e2; font-weight: bold; font-size: 1.1rem; }
+        .product-title { font-size: 1.05rem; margin: 8px 0 4px 0; color: #222; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .product-price { color: #00b2e2; font-weight: bold; font-size: 1.1rem; white-space: nowrap; }
         @media (max-width: 900px) {
             .gnb-inner, .main-banner, .category-bar, .products, .section-title { max-width: 98vw; }
             .products { grid-template-columns: repeat(2, 1fr); }
